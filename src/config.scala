@@ -1,0 +1,5 @@
+//> using publish.organization "io.github.alexarchambault.scala-cli"
+//> using publish.name "zip-input-stream"
+//> using publish.computeVersion "git:tag"
+//> using publish.repository "central"
+//> using publish.license "GPL-2.0-with-classpath-exception"
