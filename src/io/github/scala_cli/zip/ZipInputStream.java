@@ -23,7 +23,7 @@
  * questions.
  */
 
-package scala.build.internal.zip;
+package io.github.scala_cli.zip;
 
 import java.util.zip.*;
 import java.io.InputStream;
@@ -32,8 +32,8 @@ import java.io.EOFException;
 import java.io.PushbackInputStream;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import static scala.build.internal.zip.ZipConstants64.*;
-import static scala.build.internal.zip.ZipUtils.*;
+import static io.github.scala_cli.zip.ZipConstants64.*;
+import static io.github.scala_cli.zip.ZipUtils.*;
 
 /**
  * This class implements an input stream filter for reading files in the

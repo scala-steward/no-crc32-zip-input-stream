@@ -23,7 +23,7 @@
  * questions.
  */
 
-package scala.build.internal.zip;
+package io.github.scala_cli.zip;
 
 import java.nio.Buffer;
 import java.nio.ByteBuffer;
@@ -38,7 +38,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.zip.ZipEntry;
 
-import static scala.build.internal.zip.ZipConstants.ENDHDR;
+import static io.github.scala_cli.zip.ZipConstants.ENDHDR;
 
 class ZipUtils {
 

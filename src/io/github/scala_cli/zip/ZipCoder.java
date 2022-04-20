@@ -23,7 +23,7 @@
  * questions.
  */
 
-package scala.build.internal.zip;
+package io.github.scala_cli.zip;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;

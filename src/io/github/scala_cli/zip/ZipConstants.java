@@ -23,7 +23,7 @@
  * questions.
  */
 
-package scala.build.internal.zip;
+package io.github.scala_cli.zip;
 
 /*
  * This interface defines the constants that are used by the classes
