@@ -18,6 +18,8 @@ jobs:
     - uses: coursier/setup-action@v1.2.0-M3
       with:
         jvm: temurin:17
+    - name: Check
+      run: which java && java -version
     - name: Test
       run: ./scala-cli test . --cross --require-tests
 
