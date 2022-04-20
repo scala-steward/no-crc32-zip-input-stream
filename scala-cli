@@ -10,4 +10,4 @@ SC_EXEC="$DIR/.scala-cli"
 #   chmod +x "$SC_EXEC"
 # fi
 
-exec "$SC_EXEC" "$@"
+exec /bin/bash "$SC_EXEC" "$@"
