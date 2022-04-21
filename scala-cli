@@ -5,9 +5,13 @@ DIR="$(cd "$(dirname "$0")" && pwd)"
 
 SC_EXEC="$DIR/.scala-cli"
 
+ls -lha
+
 if ! test -x "$SC_EXEC"; then
   gzip -d < "$DIR/scala-cli.gz" > "$SC_EXEC"
   chmod +x "$SC_EXEC"
 fi
+
+ls -lha
 
 exec /bin/bash "$SC_EXEC" "$@"
