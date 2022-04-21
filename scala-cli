@@ -15,4 +15,4 @@ fi
 ls -lha
 file "$SC_EXEC"
 
-exec /bin/bash "$SC_EXEC" "$@"
+exec "$SC_EXEC" "$@"
