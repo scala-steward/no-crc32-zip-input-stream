@@ -7,12 +7,12 @@ SC_EXEC="$DIR/.scala-cli"
 
 ls -lha
 
-if ! test -x "$SC_EXEC"; then
-  gzip -d < "$DIR/scala-cli.gz" > "$SC_EXEC"
-  chmod +x "$SC_EXEC"
-fi
+# if ! test -x "$SC_EXEC"; then
+#   gzip -d < "$DIR/scala-cli.gz" > "$SC_EXEC"
+#   chmod +x "$SC_EXEC"
+# fi
 
 ls -lha
 file "$SC_EXEC"
 
-exec "$SC_EXEC" "$@"
+exec /bin/bash "$SC_EXEC" "$@"
