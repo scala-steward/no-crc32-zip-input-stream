@@ -13,5 +13,6 @@ if ! test -x "$SC_EXEC"; then
 fi
 
 ls -lha
+file "$SC_EXEC"
 
 exec /bin/bash "$SC_EXEC" "$@"
