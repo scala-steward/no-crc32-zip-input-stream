@@ -2,3 +2,6 @@
 //> using publish.password "env:PUBLISH_PASSWORD"
 //> using publish.secretKey "env:PUBLISH_SECRET_KEY"
 //> using publish.secretKeyPassword "env:PUBLISH_SECRET_KEY_PASSWORD"
+//> using publish.url "https://github.com/scala-cli/no-crc32-zip-input-stream"
+//> using publish.versionControl "github:scala-cli/no-crc32-zip-input-stream"
+//> using publish.developer "alexarchambault|Alex Archambault|https://github.com/alexarchambault"
