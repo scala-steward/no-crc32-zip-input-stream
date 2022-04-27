@@ -1,3 +1,4 @@
+//> using scala "2.13.8"
 //> using lib "com.lihaoyi::utest::0.7.10"
 //> using lib "io.get-coursier:interface:1.0.7"
 
