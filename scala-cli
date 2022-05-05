@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e
+SC_EXEC="$(cs get "https://github.com/scala-cli/no-crc32-zip-input-stream/releases/download/scala-cli-launcher/scala-cli-x86_64-pc-linux-v2.gz" --archive)"
+chmod +x "$SC_EXEC"
+exec "$SC_EXEC" "$@"
