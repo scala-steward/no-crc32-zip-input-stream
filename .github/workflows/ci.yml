@@ -16,8 +16,6 @@ jobs:
         fetch-depth: 0
     - uses: coursier/cache-action@v6.4
     - uses: coursier/setup-action@v1.3.0
-      with:
-        jvm: temurin:17
     - name: Test
       run: ./scala-cli test . --cross --require-tests
 
@@ -31,8 +29,6 @@ jobs:
         fetch-depth: 0
     - uses: coursier/cache-action@v6.4
     - uses: coursier/setup-action@v1.3.0
-      with:
-        jvm: temurin:17
     - name: Release
       run: ./scala-cli publish . --cross
       env:

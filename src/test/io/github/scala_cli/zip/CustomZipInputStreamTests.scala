@@ -7,12 +7,24 @@ package io.github.scala_cli.zip
 import coursierapi._
 import utest._
 
-import java.io.{FileInputStream, InputStream}
+import java.io.{ByteArrayOutputStream, FileInputStream, InputStream}
 import java.util.zip.ZipEntry
 
 import scala.collection.mutable
 
 object CustomZipInputStreamTests extends TestSuite {
+  private def readAllBytes(is: InputStream): Array[Byte] = {
+    val baos = new ByteArrayOutputStream
+    val buf = Array.ofDim[Byte](16 * 1024)
+    var read = 0
+    while ({
+      read = is.read(buf)
+      read >= 0
+    })
+      if (read > 0)
+        baos.write(buf, 0, read)
+    baos.toByteArray
+  }
   val tests = Tests {
     test("simple test") {
 
@@ -30,7 +42,7 @@ object CustomZipInputStreamTests extends TestSuite {
           ent = zis.getNextEntry()
           ent != null
         }) {
-          val b = zis.readAllBytes()
+          val b = readAllBytes(zis)
           entries += ent.getName -> b.length
         }
       }
