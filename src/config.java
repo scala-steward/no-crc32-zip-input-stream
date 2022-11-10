@@ -1,3 +1,5 @@
+//> using jvm "8"
+
 //> using publish.organization "io.github.alexarchambault.scala-cli.tmp"
 //> using publish.moduleName "zip-input-stream"
 //> using publish.computeVersion "git:tag"
