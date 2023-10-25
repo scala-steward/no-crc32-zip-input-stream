@@ -4,7 +4,7 @@
 //> using publish.moduleName "zip-input-stream"
 //> using publish.computeVersion "git:tag"
 
-//> using publish.repository "central-s01"
+//> using publish.repository "central"
 //> using publish.user "env:PUBLISH_USER"
 //> using publish.password "env:PUBLISH_PASSWORD"
 //> using publish.secretKey "env:PUBLISH_SECRET_KEY"
