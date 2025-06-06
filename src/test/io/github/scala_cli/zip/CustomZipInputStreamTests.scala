@@ -1,4 +1,4 @@
-//> using scala 2.13.8
+//> using scala 2.13.16
 //> using dep com.lihaoyi::utest::0.7.10
 //> using dep io.get-coursier:interface:1.0.7
 
