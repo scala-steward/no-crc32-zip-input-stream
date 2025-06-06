@@ -25,13 +25,13 @@ object CustomZipInputStreamTests extends TestSuite {
         baos.write(buf, 0, read)
     baos.toByteArray
   }
-  val tests = Tests {
+  val tests: Tests = Tests {
     test("simple test") {
 
       val cache = Cache.create()
       val f = cache.get(Artifact.of("https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.8/scala-library-2.13.8.jar"))
 
-      var entries = new mutable.ListBuffer[(String, Int)]
+      val entries = new mutable.ListBuffer[(String, Int)]
 
       var is: InputStream = null
       try {
@@ -39,7 +39,7 @@ object CustomZipInputStreamTests extends TestSuite {
         val zis = new ZipInputStream(is)
         var ent: ZipEntry = null
         while ({
-          ent = zis.getNextEntry()
+          ent = zis.getNextEntry
           ent != null
         }) {
           val b = readAllBytes(zis)
