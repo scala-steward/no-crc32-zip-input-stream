@@ -11,11 +11,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - uses: coursier/cache-action@v6.4
-    - uses: VirtusLab/scala-cli-setup@v1.0
+    - uses: VirtusLab/scala-cli-setup@v1
       with:
         power: true
     - name: Test
@@ -26,11 +26,11 @@ jobs:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - uses: coursier/cache-action@v6.4
-    - uses: VirtusLab/scala-cli-setup@v1.0
+    - uses: VirtusLab/scala-cli-setup@v1
       with:
         power: true
     - name: Release
