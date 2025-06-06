@@ -15,7 +15,7 @@ import scala.collection.mutable
 object CustomZipInputStreamTests extends TestSuite {
   private def readAllBytes(is: InputStream): Array[Byte] = {
     val baos = new ByteArrayOutputStream
-    val buf = Array.ofDim[Byte](16 * 1024)
+    val buf  = Array.ofDim[Byte](16 * 1024)
     var read = 0
     while ({
       read = is.read(buf)
@@ -29,14 +29,16 @@ object CustomZipInputStreamTests extends TestSuite {
     test("simple test") {
 
       val cache = Cache.create()
-      val f = cache.get(Artifact.of("https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.8/scala-library-2.13.8.jar"))
+      val f     = cache.get(Artifact.of(
+        "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.8/scala-library-2.13.8.jar"
+      ))
 
       val entries = new mutable.ListBuffer[(String, Int)]
 
       var is: InputStream = null
       try {
         is = new FileInputStream(f)
-        val zis = new ZipInputStream(is)
+        val zis           = new ZipInputStream(is)
         var ent: ZipEntry = null
         while ({
           ent = zis.getNextEntry
@@ -46,10 +48,9 @@ object CustomZipInputStreamTests extends TestSuite {
           entries += ent.getName -> b.length
         }
       }
-      finally {
+      finally
         if (is != null)
           is.close()
-      }
 
       val map = entries.toMap
 
