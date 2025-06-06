@@ -1,3 +1,7 @@
 /.bsp/
 /.scala-build/
+/.idea/
+/.bloop/
+/.metals/
+/.vscode/
 /no-crc32-zip-input-stream.iml
