@@ -1,5 +1,5 @@
 //> using scala 2.13.16
-//> using dep com.lihaoyi::utest::0.8.5
+//> using dep com.lihaoyi::utest::0.8.9
 //> using dep io.get-coursier:interface:1.0.28
 
 package io.github.scala_cli.zip
